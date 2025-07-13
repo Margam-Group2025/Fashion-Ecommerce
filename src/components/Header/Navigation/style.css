@@ -1,0 +1,50 @@
+.categoryPanels Link{
+   text-transform: capitalize !important;
+
+}
+.nav li:hover .submenu{
+   visibility: hidden;
+   z-index: 1000;
+}
+.nav  li:hover .submenu{
+   opacity: 1 !important;
+   visibility: inherit;
+   top:100%;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after{
+   font-size: 22px !important;
+   color: #000 !important;
+
+}
+.homeCats{
+   overflow: inherit !important;
+}
+.homeCats .swiper-button-prev ,.homeCatsliders .swiper-button-next{
+   width: 30px;
+   height: 30px;
+   min-width: 30px;
+}
+.homeCats .swiper-button-prev:after, .homeCatsliders .swiper-button-next:after{
+   font-size: 16px !important;
+}
+.homeCats .swiper-button-prev{
+   left: -10px !important;
+}
+.homeCats .swiper-button-next{
+   right: -10px !important;
+}
+
+.homeCats .items {
+   border: 1px rgba(0, 0, 0, 0.1);
+}
+
+.homeCats .swiper-button-prev:hover ,.homeCatsliders .swiper-button-next:hover{
+   background: #c71a1a !important;
+}
+.homeCats .swiper-button-prev:hover::after,.homeCatsliders .swiper-button-next:hover::after{
+   color: #fff !important;
+}
+.homeCats .items:hover img{
+   transform: scale(1.1);
+}
