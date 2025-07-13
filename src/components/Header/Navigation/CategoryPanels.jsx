@@ -109,6 +109,8 @@ import { FiMinusSquare } from "react-icons/fi";
             </li>
 
             {/* // Repeat similar structure for other categories */}
+                        {/* // Repeat similar structure for other categories */}
+
             <li className='list-none flex items-center relative flex-col'>
               <Link to="/" className='w-full'>
               <Button className='w-full !text-left !justify-start !px-3 !text-[rgba(0,0,0,0.7)] '>
