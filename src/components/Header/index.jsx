@@ -9,6 +9,7 @@ import { RiShoppingCart2Line } from "react-icons/ri";
 import { GoGitCompare } from "react-icons/go";
 import { FaRegHeart } from "react-icons/fa";
 import Tooltip from '@mui/material/Tooltip';
+// import FashionShowcase from '../FashionShowcase';
 
 
 
@@ -90,6 +91,7 @@ const Header = () => {
            </div>
         </div>
         <Navigation/>
+        {/* <FashionShowcase/> */}
     </header>
   )
 }

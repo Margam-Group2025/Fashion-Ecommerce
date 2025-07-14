@@ -12,13 +12,11 @@ const ProductItems = () => {
     <div className="productItems shadow-lg rounded-md overflow-hidden border border-[hsla(0,0%,0%,0.1)]">
       <div className="group relative w-full h-[220px] bg-white overflow-hidden">
         <Link to="/" className="block w-full h-full relative">
-          {/* Base Image */}
           <img
             src="/slides/items3.webp"
             alt="Product"
             className="w-full h-full object-cover transition-opacity duration-500"
           />
-          {/* Hover Image */}
           <img
             src="/slides/items2.webp"
             alt="Product Hover"
@@ -26,7 +24,7 @@ const ProductItems = () => {
           />
         </Link>
 
-        <span className="absolute top-2 left-2 z-10 bg-primary text-white rounded px-2 py-[2px] text-xs font-semibold">
+        <span className="absolute top-2 left-2 z-10 bg-green-500 text-white rounded px-2 py-[2px] text-xs font-semibold">
           10%
         </span>
 

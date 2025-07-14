@@ -4,6 +4,7 @@ import HomeCatSlider from '../../components/CategorySlider'
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import ProductSlider from '../../components/ProductSlider' 
+import FashionShowcase from '../../components/FashionShowcase';
 
 const Home = () => {
    const [value, setValue] = React.useState(0);
@@ -48,6 +49,7 @@ const Home = () => {
         </div>
 
         <ProductSlider items/>
+        <FashionShowcase/>
       </div>
        
     </section>
