@@ -5,6 +5,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import ProductSlider from '../../components/ProductSlider' 
 import FashionShowcase from '../../components/FashionShowcase';
+import Footer from '../../Footer/Footer';
 
 const Home = () => {
    const [value, setValue] = React.useState(0);
@@ -50,6 +51,7 @@ const Home = () => {
 
         <ProductSlider items/>
         <FashionShowcase/>
+        <Footer/>
       </div>
        
     </section>
