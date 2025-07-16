@@ -9,9 +9,8 @@ import { RiShoppingCart2Line } from "react-icons/ri";
 import { GoGitCompare } from "react-icons/go";
 import { FaRegHeart } from "react-icons/fa";
 import Tooltip from '@mui/material/Tooltip';
+import OfferHeader from './OfferHeader';
 // import FashionShowcase from '../FashionShowcase';
-
-
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -23,27 +22,9 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 const Header = () => {
   return (
+    <>
+    <OfferHeader/>
     <header className='bg-white'>
-        <div className="top-strip py-2 border-t-[1px] border-gray-250 border-b-[1px]">
-            <div className="container">
-                <div className='flex items-center justify-between'>
-                    <div className='coll w-[50%]'>
-                        <p className='text-[14px] font-[500]'>Get up to 30% off new season styles , limited offer</p>
-                    </div>
-
-                    <div className='col2 flex align-items-center justify-end '>
-                        <ul className='flex items-center gap-4'>
-                            <li className='list-none'>
-                                <Link to="#" className='text-[13px] link font-[500] transition'>Help Center</Link>
-                            </li>
-                            <li className='list-none'>
-                                <Link to="#" className='text-[13px] link font-[500] transition'>Order Tracking</Link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div className='header py-4 border-b-[1px] border-gray-250'>
            <div className='container flex items-center justify-between'>
             <div className='col1 w-[25%]'>
@@ -93,6 +74,7 @@ const Header = () => {
         <Navigation/>
         {/* <FashionShowcase/> */}
     </header>
+    </>
   )
 }
 

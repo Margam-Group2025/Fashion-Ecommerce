@@ -13,7 +13,7 @@ const Navigation = () => {
   const openCategoryPanel =() =>{
       setOpenPanels(true);
   }
-  return (
+  return ( 
     <>
     <nav className='py-2'>
         <div className='container flex items-center justify-end '>
@@ -26,21 +26,21 @@ const Navigation = () => {
         <div className="col2 w-[65%]">
             <ul className='flex items-center gap-6 nav'>
               <li className='list-none'>
-                <Link to="/" className="link transition text-[16px] font-[500] hover:text-red-700 active:text-red-600 ">Home</Link>
+                <Link to="/" className=" link transition text-[16px] font-[500] hover:text-pink-500 active:text-pink-500">Home</Link>
               </li>
               <li className='list-none relative'>
-                <Link to="/" className="link transition text-[16px] font-[500] hover:text-red-700 active:text-red-600">
+                <Link to="/" className="link transition text-[16px] font-[500] hover:text-pink-500 active:text-pink-500">
 
                 Fashion</Link>
                 <div className='submenu absolute top-[120%] left-0 min-w-[100px] bg-white shadow-md opacity-0 transition-all'>
                   <ul>
                        <li className='list-none w-full !text-left !justify-start !rounded-none'>
                         <Link className='w-full link-danger'>
-                         <Button className='!text-[rgba(31,30,30,0.9)] '>Women</Button>
+                         <Button className='!text-[rgba(31,30,30,0.9)]'>Women</Button>
                          </Link>
                       </li>
                        <li className='list-none w-full !text-left !justify-start !rounded-none'>
-                        <Link className='w-full link-danger'>
+                        <Link className='w-full '>
                          <Button className='!text-[rgba(0,0,0,0.8)] '>Girls</Button>
                           </Link>
                       </li>                       
@@ -53,16 +53,16 @@ const Navigation = () => {
                 </div>
               </li>
                 <li className='list-none'>
-                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-red-700 active:text-red-600">Bags</Link> 
+                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-pink-500 active:text-pink-500">Bags</Link> 
                 </li>
                 <li className='list-none'>
-                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-red-700 active:text-red-600">Beauty</Link> 
+                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-pink-500 active:text-pink-500">Beauty</Link> 
                 </li>
                 <li className='list-none'>
-                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-red-700 active:text-red-600">Explore</Link> 
+                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-pink-500 active:text-pink-500">Explore</Link> 
                 </li>
                 <li className='list-none relative'>
-                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-red-700 active:text-red-600">Occasion</Link> 
+                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-pink-500 active:text-pink-500">Occasion</Link> 
                     <div className='submenu absolute top-[120%] left-0 min-w-[100px] bg-white shadow-md opacity-0 transition-all'>
                   <ul>
                        <li className='list-none w-full !text-left !justify-start !rounded-none'>
@@ -102,7 +102,7 @@ const Navigation = () => {
                 </div>
                 </li>
                  <li className='list-none relative'>
-                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-red-700 active:text-red-600">New Arrivals</Link>
+                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-pink-500 active:text-pink-500">New Arrivals</Link>
                     <div className='submenu absolute top-[120%] left-0 min-w-[100px] bg-white shadow-md opacity-0 transition-all'>
                   <ul>
                        <li className='list-none w-full !text-left !justify-start !rounded-none'>

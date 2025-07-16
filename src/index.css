@@ -19,7 +19,7 @@ body{
   height: 8px !important;
 }
 ::-webkit-scrollbar-thumb {
-  background: #e84a4a !important;
+  background: #ec4899 !important;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-track {
@@ -33,16 +33,16 @@ header .top-strip{
     border-bottom:1px soild rgba(0, 0, 0, 0.1);
 }
 
-.bg-org{background:#ff5252 ;}
-.link:hover{color:#cd3b3b;}
+.bg-org{background:#ec4899 ;}
+.link:hover{color:#ec4899;}
 .slider{
 overflow: inherit !important;
 }
 .MuiTabs-indicator {
-  background-color: #ff5252 !important;
+  background-color: #ec4899 !important;
 }
 .MuiTab-textColorPrimary.Mui-selected{
-  color: #e64b13 !important;
+  color: #ec4899!important;
 }
 
 .productSlider .swiper-wrapper{padding:15px; margin-left: -15px; margin-right: -15px;}

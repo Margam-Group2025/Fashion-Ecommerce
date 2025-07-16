@@ -40,7 +40,7 @@
 }
 
 .homeCats .swiper-button-prev:hover ,.homeCatsliders .swiper-button-next:hover{
-   background: #c71a1a !important;
+   background: #ec4899 !important;
 }
 .homeCats .swiper-button-prev:hover::after,.homeCatsliders .swiper-button-next:hover::after{
    color: #fff !important;
