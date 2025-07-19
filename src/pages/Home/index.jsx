@@ -50,14 +50,19 @@ const Home = () => {
         </div>
         </div>
 
-        <ProductSlider items/>
+        <ProductSlider items={7}/>
+        </div>
+            </section>
+
         <FashionShowcase/>
+      <section className='py-5 pt-0 bg-white'>
+      <div className='container'>
+       <h1 className='text-[20px] font-[600]'> Latest Products</h1>
+       <ProductSlider items={7}/>
+      </div>
+      </section>
         <FashionBlog/>
         <Footer/>
-      </div>
-       
-    </section>
-
     </>
   )
 }
