@@ -60,11 +60,11 @@ export default function FashionBlog() {
   return (
     <div className="font-sans text-gray-800">
       {/* Blog Section */}
-      <section className="relative py-16 px-4 bg-gradient-to-br from-pink-100 to-pink-50 overflow-hidden">
-        <div className="absolute top-0 left-0 w-72 h-72 bg-pink-300 rounded-full blur-3xl opacity-30 -z-10"></div>
-        <div className="absolute bottom-0 right-0 w-72 h-72 bg-rose-400 rounded-full blur-2xl opacity-20 -z-10"></div>
+      <section className="relative py-16 px-4 bg-gradient-to-br from-orange-100 to-orange-50 overflow-hidden">
+        <div className="absolute top-0 left-0 w-72 h-72 bg-orange-300 rounded-full blur-3xl opacity-30 -z-10"></div>
+        <div className="absolute bottom-0 right-0 w-72 h-72 bg-orange-400 rounded-full blur-2xl opacity-20 -z-10"></div>
 
-        <h2 className="text-3xl font-bold text-center text-pink-600 mb-10">From the Blog</h2>
+        <h2 className="text-3xl font-bold text-center text-orange-600 mb-10">From the Blog</h2>
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-3 mb-10">
@@ -77,8 +77,8 @@ export default function FashionBlog() {
               }}
               className={`px-4 py-1.5 rounded-full border text-sm font-medium transition ${
                 selectedCategory === category
-                  ? "bg-pink-500 text-white border-pink-500"
-                  : "text-pink-600 border-pink-300 hover:bg-pink-100"
+                  ? "bg-orange-500 text-white border-orange-500"
+                  : "text-black border-orange-300 hover:bg-pink-100"
               }`}
             >
               {category}
@@ -95,12 +95,12 @@ export default function FashionBlog() {
             >
               <img src={post.image} alt={post.title} className="w-full h-60 object-cover" />
               <div className="p-3">
-                <span className="text-xs font-semibold uppercase text-rose-500">{post.category}</span>
+                <span className="text-xs font-semibold uppercase text-orange-500">{post.category}</span>
                 <h3 className="text-lg font-semibold mt-1 text-gray-800 leading-tight line-clamp-2">{post.title}</h3>
                 <p className="text-gray-600 mt-1 mb-2 text-sm line-clamp-3">{post.excerpt}</p>
                 <a
                   href="#"
-                  className="inline-block bg-pink-500 text-white px-3 py-1.5 rounded-md text-xs hover:bg-pink-600 transition"
+                  className="inline-block bg-orange-500 text-white px-3 py-1.5 rounded-md text-xs hover:bg-orange-600 transition"
                 >
                   Read More
                 </a>
@@ -113,7 +113,7 @@ export default function FashionBlog() {
           <div className="text-center mt-10">
             <button
               onClick={() => setVisibleCount(prev => prev + 3)}
-              className="bg-pink-500 text-white px-6 py-2 rounded-full text-sm hover:bg-pink-600 transition"
+              className="bg-orange-500 text-white px-6 py-2 rounded-full text-sm hover:bg-orange-600 transition"
             >
               View More
             </button>
