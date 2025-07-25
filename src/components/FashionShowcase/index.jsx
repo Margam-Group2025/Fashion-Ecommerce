@@ -13,7 +13,7 @@ export default function FashionShowCase() {
     <div>
       <h2 className="text-4xl font-bold mb-4">Grace in Every Drape</h2>
       <p className="mb-2 text-lg">
-        Flat <span className="bg-rose-500 px-2 py-1 rounded font-bold">40% OFF</span> on premium Sarees
+        Flat <span className="bg-orange-500 px-2 py-1 rounded font-bold">40% OFF</span> on premium Sarees
       </p>
     </div>
     
