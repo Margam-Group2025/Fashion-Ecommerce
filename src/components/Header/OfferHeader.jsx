@@ -3,7 +3,7 @@ import Link from '@mui/material/Link'
 
 const OfferHeader = () => {
   return (
-    <header className='bg-pink-300'>
+    <header className='bg-orange-200'>
         <div className="top-strip py-2 border-t-[1px] border-gray-250 border-b-[1px]">
             <div className="container ">
                 <div className='flex items-center justify-between'>

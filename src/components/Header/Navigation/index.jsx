@@ -26,10 +26,10 @@ const Navigation = () => {
         <div className="col2 w-[65%]">
             <ul className='flex items-center gap-6 nav'>
               <li className='list-none'>
-                <Link to="/" className=" link transition text-[16px] font-[500] hover:text-pink-500 active:text-pink-500">Home</Link>
+                <Link to="/" className=" link transition text-[16px] font-[500] hover:text-orange-500 active:text-orange-500">Home</Link>
               </li>
               <li className='list-none relative'>
-                <Link to="/" className="link transition text-[16px] font-[500] hover:text-pink-500 active:text-pink-500">
+                <Link to="/" className="link transition text-[16px] font-[500] hover:text-orange-500 active:text-orange-500">
 
                 Fashion</Link>
                 <div className='submenu absolute top-[120%] left-0 min-w-[100px] bg-white shadow-md opacity-0 transition-all'>
@@ -52,17 +52,86 @@ const Navigation = () => {
                   </ul>
                 </div>
               </li>
+         <div className="relative group">
+      {/* Main Nav Item */}
+      <button className=" px-4 py-2 font-semibold text-Black hover:text-orange-600">
+        Clothing
+      </button>
+
+      {/* Dropdown Content */}
+      <div className="absolute left-1/2 top-full -translate-x-1/2 z-50 hidden group-hover:flex bg-white w-[800px] shadow-lg border-t border-gray-200 p-6 gap-8 text-sm text-gray-700">
+         <div className="flex gap-6 divide-x divide-gray-200 w-full">
+
+        {/* KURTAS */}
+        <div className='pr-6'>
+          <h4 className="font-bold mb-2">KURTAS</h4>
+          <ul>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">All Kurtas</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Straight</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">A-line</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Gathered</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Anarkali</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Kaftan</li>
+          </ul>
+        </div>
+       {/* SAREES */}
+        <div className='pl-6 pr-6'>
+          <h4 className="font-bold text-orange-600 mb-2">SAREES</h4>
+          <ul>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">All Sarees</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Woven</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Printed</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Embroidered</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Hand Painted</li>
+          </ul>
+        </div>
+
+        {/* SETS */}
+        <div className='pl-6 pr-6'>
+          <h4 className="font-bold mb-2">SETS</h4>
+          <ul>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Lehenga Sets</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Sharara Sets</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Sleepwear/Nightwear</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Loungewear</li>
+          </ul>
+        </div>
+
+        {/* MIX & MATCH */}
+        <div className='pl-6 pr-6'>
+          <h4 className="font-bold text-orange-600 mb-2">MIX & MATCH</h4>
+          <ul>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Bottoms</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Blouses</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Jackets</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Scarfs & Shawls</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Dupattas</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Skirts</li>
+          </ul>
+        </div>
+         {/* DRESSES */}
+        <div className='pl-6 pr-6'>
+          <h4 className="font-bold mb-2">DRESSES</h4>
+          <ul>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">All Dresses</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Short</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Midi</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Long</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Ready-to-ship</li>
+            <li className="hover:text-orange-600 text-slate-800 cursor-pointer">Maternity Dresses</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
                 <li className='list-none'>
-                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-pink-500 active:text-pink-500">Bags</Link> 
+                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-orange-500 active:text-orange-500">Saree</Link> 
                 </li>
                 <li className='list-none'>
-                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-pink-500 active:text-pink-500">Beauty</Link> 
-                </li>
-                <li className='list-none'>
-                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-pink-500 active:text-pink-500">Explore</Link> 
+                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-orange-500 active:text-orange-500">Explore</Link> 
                 </li>
                 <li className='list-none relative'>
-                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-pink-500 active:text-pink-500">Occasion</Link> 
+                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-orange-500 active:text-orange-500">Occasion</Link> 
                     <div className='submenu absolute top-[120%] left-0 min-w-[100px] bg-white shadow-md opacity-0 transition-all'>
                   <ul>
                        <li className='list-none w-full !text-left !justify-start !rounded-none'>
@@ -102,7 +171,7 @@ const Navigation = () => {
                 </div>
                 </li>
                  <li className='list-none relative'>
-                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-pink-500 active:text-pink-500">New Arrivals</Link>
+                    <Link to="/" className="link transition text-[16px] font-[500] hover:text-orange-500 active:text-orange-500">New Arrivals</Link>
                     <div className='submenu absolute top-[120%] left-0 min-w-[100px] bg-white shadow-md opacity-0 transition-all'>
                   <ul>
                        <li className='list-none w-full !text-left !justify-start !rounded-none'>
