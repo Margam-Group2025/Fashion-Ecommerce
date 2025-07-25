@@ -3,42 +3,57 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 px-8 py-12">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5  gap-6">
         {/* Services */}
         <div>
-          <h6 className="text-white text-lg font-semibold mb-4">Services</h6>
+          <h6 className="text-orange-500 text-lg font-semibold mb-4 ">Our Services</h6>
           <ul className="space-y-2">
-            <li><a className="hover:text-white transition">Branding</a></li>
-            <li><a className="hover:text-white transition">Design</a></li>
-            <li><a className="hover:text-white transition">Marketing</a></li>
-            <li><a className="hover:text-white transition">Advertisement</a></li>
+            <li><a className="hover:text-white transition">Return & Cancellation</a></li>
+            <li><a className="hover:text-white transition">My Account</a></li>
+            <li><a className="hover:text-white transition">Exchange Policy</a></li>
+            <li><a className="hover:text-white transition">Shipping</a></li>
+            <li><a className="hover:text-white transition">Payment Options</a></li>
+
           </ul>
         </div>
 
         {/* Company */}
         <div>
-          <h6 className="text-white text-lg font-semibold mb-4">Company</h6>
+          <h6 className="text-orange-500 text-lg font-semibold mb-4">Company</h6>
           <ul className="space-y-2">
             <li><a className="hover:text-white transition">About us</a></li>
-            <li><a className="hover:text-white transition">Contact</a></li>
-            <li><a className="hover:text-white transition">Jobs</a></li>
-            <li><a className="hover:text-white transition">Press kit</a></li>
+            <li><a className="hover:text-white transition">Contact us</a></li>
+            <li><a className="hover:text-white transition">Our Store</a></li>
+            <li><a className="hover:text-white transition">Blog</a></li>
           </ul>
         </div>
 
         {/* Legal */}
         <div>
-          <h6 className="text-white text-lg font-semibold mb-4">Legal</h6>
+          <h6 className="text-orange-500 text-lg font-semibold mb-4">Legal</h6>
           <ul className="space-y-2">
             <li><a className="hover:text-white transition">Terms of use</a></li>
             <li><a className="hover:text-white transition">Privacy policy</a></li>
             <li><a className="hover:text-white transition">Cookie policy</a></li>
           </ul>
         </div>
+        
+         {/* Best Sellers */}
+        <div>
+          <h6 className="text-orange-500 text-lg font-semibold mb-4">Best Sellers</h6>
+          <ul className="space-y-2">
+            <li><a className="hover:text-white transition">Banarasi</a></li>
+            <li><a className="hover:text-white transition">Kanjeevaram</a></li>
+            <li><a className="hover:text-white transition">Sambalpuri</a></li>
+           <li><a className="hover:text-white transition">Bandhani</a></li>
+            <li><a className="hover:text-white transition">Chanderi</a></li>
+
+          </ul>
+        </div>
 
         {/* Newsletter */}
         <div>
-          <h6 className="text-white text-lg font-semibold mb-4">Newsletter</h6>
+          <h6 className="text-orange-500 text-lg font-semibold mb-4">Newsletter</h6>
           <label className="block mb-2 text-sm">Enter your email address</label>
           <div className="flex">
             <input
@@ -46,7 +61,7 @@ const Footer = () => {
               placeholder="username@site.com"
               className="w-full px-4 py-2 rounded-l-md bg-gray-800 border border-gray-600 text-white placeholder-gray-400 focus:outline-none"
             />
-            <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-md text-white font-semibold">
+            <button className="bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded-r-md text-white font-semibold">
               Subscribe
             </button>
           </div>
@@ -61,7 +76,7 @@ const Footer = () => {
             height="24"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="text-blue-500"
+            className="text-orange-500"
           >
             <path d="M12 0l3.09 6.26L22 7.27l-5 4.87L18.18 20 12 16.91 5.82 20 7 12.14 2 7.27l6.91-1.01z" />
           </svg>
