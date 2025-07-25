@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Optional transitions */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 *{
   margin: 0px;
   padding: 0px;
@@ -19,7 +24,7 @@ body{
   height: 8px !important;
 }
 ::-webkit-scrollbar-thumb {
-  background: #ec4899 !important;
+  background: #f8993b !important;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-track {
@@ -33,16 +38,27 @@ header .top-strip{
     border-bottom:1px soild rgba(0, 0, 0, 0.1);
 }
 
-.bg-org{background:#ec4899 ;}
-.link:hover{color:#ec4899;}
+.bg-org{background:#f8993b ;}
+.link:hover{color:#f8993b;}
 .slider{
 overflow: inherit !important;
 }
 .MuiTabs-indicator {
-  background-color: #ec4899 !important;
+  background-color: #f8993b !important;
 }
 .MuiTab-textColorPrimary.Mui-selected{
-  color: #ec4899!important;
+  color: #f8993b!important;
 }
 
-.productSlider .swiper-wrapper{padding:15px; margin-left: -15px; margin-right: -15px;}
+.productSlider .swiper-wrapper{padding:15px; margin-left: -15px; margin-right: -15px;}       
+
+[data-theme="dark"] {
+  --background-color: #0a0a0a;
+  --foreground-color: #567aff;
+  --primary-text-color: #f6f6f6;
+  --secondary-text-color: #0a0a0a;
+  --toggle-bg: #283452;
+  --toggle-fg: #00a6ff;
+}
+
+.MuiCheckbox-root{Padding:6px !important}
