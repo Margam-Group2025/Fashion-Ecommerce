@@ -5,9 +5,8 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import ProductSlider from '../../components/ProductSlider' 
 import FashionShowcase from '../../components/FashionShowcase';
-import Footer from '../../Footer/Footer';
 import FashionBlog from '../../components/FashionBlog';
-
+import Features from '../../components/Features';
 const Home = () => {
    const [value, setValue] = React.useState(0);
 
@@ -62,7 +61,7 @@ const Home = () => {
       </div>
       </section>
         <FashionBlog/>
-        <Footer/>
+        <Features/>
     </>
   )
 }
