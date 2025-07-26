@@ -7,6 +7,7 @@ import ProductSlider from '../../components/ProductSlider'
 import FashionShowcase from '../../components/FashionShowcase';
 import FashionBlog from '../../components/FashionBlog';
 import Features from '../../components/Features';
+import Link from '@mui/material/Link';
 const Home = () => {
    const [value, setValue] = React.useState(0);
 
@@ -27,7 +28,9 @@ const Home = () => {
             <p className='text-[16px] font-[600]'>Do Not Miss the offers until the offers Ends</p>
            </div>
          <div className='rightsec w-[60%]'>
-         <p className='text-[16px] font-[600]'>View All</p>
+         <Link href="/productlisting" className=''>
+        <p className="text-[16px] font-[600] cursor-pointer link-danger">View All</p>
+         </Link>
       <Tabs
         value={value}
         onChange={handleChange}
