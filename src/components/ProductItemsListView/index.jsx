@@ -5,6 +5,7 @@ import { MdZoomOutMap } from "react-icons/md";
 import { IoMdGitCompare } from "react-icons/io";
 import { FaRegHeart } from "react-icons/fa6";
 import Button from "@mui/material/Button";
+import { FaShoppingCart } from 'react-icons/fa';
 import "./style.css";
 
 const ProductItems = () => {
@@ -53,7 +54,10 @@ const ProductItems = () => {
             Baby Pink Silk saree
           </Link>
         </h3>
-
+        <p className="text-[14px] mb-3 ">
+         Crafted from premium silk, this saree features intricate zari weaving in floral and paisley motifs,
+          exuding traditional charm with a modern touch
+        </p>
         <Rating name="half-rating-read" defaultValue={4.5} precision={0.5} readOnly />
 
         <div className="mt-1 flex items-center gap-4">
@@ -62,6 +66,10 @@ const ProductItems = () => {
           </span>
           <span className="text-red-500 font-semibold">$2,500.00</span>
         </div>
+       <button className="bg-orange-600 text-white px-4 py-2 rounded flex items-center gap-2 hover:bg-red-500">
+      <FaShoppingCart />
+        Add to Cart
+         </button>
       </div>
     </div>
   );
