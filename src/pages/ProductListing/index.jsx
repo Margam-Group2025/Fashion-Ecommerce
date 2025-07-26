@@ -9,6 +9,8 @@ import { IoMdMenu } from "react-icons/io";
 import { GrGrid } from "react-icons/gr";
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import Pagination from '@mui/material/Pagination';
+
 
 
 const ProductListing = () => {
@@ -22,7 +24,7 @@ const ProductListing = () => {
     setAnchorEl(null);
   };
   return (
-    <section className='py-5'>
+    <section className='py-5 pb-0'>
       <div className='container'>
        <Breadcrumbs aria-label="breadcrumb">
              <Link underline="hover" color="inherit" href="/" className='link'>
@@ -50,12 +52,15 @@ const ProductListing = () => {
 
         {/* Grid and List   */}
 
-          <div className='col1 flex items-center gap-1'>
-          <Button className="!W-[40PX] !h-[40px] !min-w-[40px] !rounded-full !text-[#000] "
+          <div className='col1 flex items-center gap-1 '>
+          <Button className={`!W-[40PX] !h-[40px] !min-w-[40px] !rounded-full !text-[#000]
+             ${itemView === 'list' && 'active'}`}
           onClick={()=>setItemView('list')}> 
-          <IoMdMenu  className='text-[rgba(0,0,0,0.7)]'/>
+          <IoMdMenu  className='text-[rgba(0,0,0,0.7)] text-[20px]'/>
             </Button>
-             <Button className="!W-[40PX] !h-[40px] !min-w-[40px] !rounded-full !text-[#000] "
+
+             <Button className={`!W-[40PX] !h-[40px] !min-w-[40px] !rounded-full !text-[#000]
+             ${itemView === 'grid' && 'active'}`}
              onClick={()=>setItemView('Grid')}> 
               <GrGrid className='text-[rgba(0,0,0,0.7)]'/>
             </Button>
@@ -126,6 +131,9 @@ const ProductListing = () => {
             }
              
            </div>
+          <div className='flex items-center justify-center mt-10'>
+           <Pagination count={10} showFirstButton showLastButton />
+            </div>          
        </div>
         </div>
         </div>
