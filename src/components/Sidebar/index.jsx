@@ -32,12 +32,12 @@ const Siderbar = () => {
           </h3>
       <Collapse isOpened={isOpenCategoryFilter}>
       <div className='scroll px-3 relative -left-[13px]'>
-      <FormControlLabel control={<Checkbox size="small" />} label="Fashion" className='w-full'/>
-      <FormControlLabel control={<Checkbox size="small" />} label="Women" className='w-full'/>
-      <FormControlLabel control={<Checkbox size="small" />} label="Kids" className='w-full'/>           
-      <FormControlLabel control={<Checkbox size="small" />} label="Girls" className='w-full'/>
-      <FormControlLabel control={<Checkbox size="small" />} label="Saree" className='w-full'/>
-      <FormControlLabel control={<Checkbox size="small" />} label="Kurtas" className='w-full'/>
+      <FormControlLabel control={<Checkbox size="small" />} label="Womens" className='w-full'/>
+      <FormControlLabel control={<Checkbox size="small" />} label="Sarees" className='w-full'/>
+      <FormControlLabel control={<Checkbox size="small" />} label="Nothheast India" className='w-full'/>           
+      <FormControlLabel control={<Checkbox size="small" />} label="South India" className='w-full'/>
+      <FormControlLabel control={<Checkbox size="small" />} label="West India" className='w-full'/>
+      <FormControlLabel control={<Checkbox size="small" />} label="East India" className='w-full'/>
       <FormControlLabel control={<Checkbox size="small" />} label="Others" className='w-full'/>
       </div>
       </Collapse>
@@ -62,7 +62,7 @@ const Siderbar = () => {
       </Collapse>
     </div>
      <div className='box mt-3'>
-      <h3 className='mb-3 text-[16px] font-[600] flex items-center pr-5'>Size
+      <h3 className='mb-3 text-[16px] font-[600] flex items-center pr-5'>Fabric
         <Button className="w-[30px] h-[30px] !rounded-full !ml-auto !text-black" onClick={()=>setIsOpenSizeFilter 
           (!isOpenSizeFilter)}>
             {
@@ -110,12 +110,6 @@ const Siderbar = () => {
       </div>
       <div className='w-full'>
         <Rating name="size-small" defaultValue={3} size="small" readOnly />
-      </div>
-      <div className='w-full'>
-        <Rating name="size-small" defaultValue={2} size="small" readOnly />
-      </div>
-      <div className='w-full'>
-        <Rating name="size-small" defaultValue={1} size="small" readOnly />
       </div>
     </div>
     
