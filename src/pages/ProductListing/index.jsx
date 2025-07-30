@@ -10,6 +10,9 @@ import { GrGrid } from "react-icons/gr";
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Pagination from '@mui/material/Pagination';
+import FashionShowCase from '../../components/FashionShowcase'
+import { Feather } from 'lucide-react';
+import FeaturesSection from '../../components/Features';
 
 
 
@@ -24,6 +27,7 @@ const ProductListing = () => {
     setAnchorEl(null);
   };
   return (
+    <>
     <section className='py-5 pb-0'>
       <div className='container'>
        <Breadcrumbs aria-label="breadcrumb">
@@ -138,7 +142,10 @@ const ProductListing = () => {
         </div>
         </div>
     </section>
+    <FeaturesSection/>
+
+  </>
   )
 }
-
+<FashionShowCase/>
 export default ProductListing
