@@ -55,9 +55,8 @@ const ProductItems = () => {
           </Link>
         </h3>
          <p className="text-[14px] ">
-         Crafted from premium silk, this saree features intricate zari weaving in floral and paisley motifs,
-          exuding traditional charm with a modern touch
-        </p>
+         Crafted from premium silk
+         </p>
         <Rating name="half-rating-read" defaultValue={4.5} precision={0.5} readOnly />
 
         <div className="mt-1 flex items-center gap-4">
