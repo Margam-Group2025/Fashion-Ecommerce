@@ -9,6 +9,7 @@ import Tooltip from "@mui/material/Tooltip";
 import Search from "../Search";
 import Navigation from "./Navigation";
 import OfferHeader from "./OfferHeader";
+import { IoGitCompareOutline  } from "react-icons/io5";
 
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -63,6 +64,17 @@ const Header = () => {
                     <IconButton aria-label="Like">
                       <StyledBadge badgeContent={5} color="error">
                         <FaRegHeart />
+                      </StyledBadge>
+                    </IconButton>
+                  </Tooltip>
+                </li>
+
+                 {/* Compare */}
+                <li>
+                  <Tooltip title="Compare">
+                    <IconButton aria-label="Cart">
+                      <StyledBadge badgeContent={2} color="error">
+                        <IoGitCompareOutline  />
                       </StyledBadge>
                     </IconButton>
                   </Tooltip>
