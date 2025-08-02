@@ -41,14 +41,14 @@ const Header = () => {
          </div>
 
             {/* Search */}
-            <div className="col2 w-[45%] mb-4 ">
+            <div className="col2 w-[45%] mb-3 mt-2 ">
               <Search />
             </div>
             {/* Actions */}
-            <div className="col3 w-[30%] flex items-center pl-7">
-              <ul className="flex items-center justify-end gap-4">
+            <div className="col3 w-[30%] flex items-center pl-11">
+              <ul className="flex items-center justify-end gap-5">
                 {/* Auth Links */}
-                <li className="list-none">
+                <li className="list-none pl-5">
                   <Link to="/login" className="text-[14px] link font-[500] transition">
                     Login
                   </Link>
