@@ -62,7 +62,7 @@ const ProductZoom = () => {
             <div
               className={`item rounded-md overflow-hidden cursor-pointer group 
                 ${slideIndex === 2 ? 'opacity-1' : 'opacity-30'}`} 
-              onClick={() => goto(1)}
+              onClick={() => goto(2)}
             >
               <img
                 src="/slides/items3.webp"
@@ -75,7 +75,7 @@ const ProductZoom = () => {
       </div>
 
       {/* Zoom Slider */}
-      <div className="zoomContainer w-[75%] h-[450px] overflow-hidden">
+      <div className="zoomContainer w-[75%] h-[430px] overflow-hidden">
         <Swiper
           onSwiper={setZoomSliderBig}
           slidesPerView={1}

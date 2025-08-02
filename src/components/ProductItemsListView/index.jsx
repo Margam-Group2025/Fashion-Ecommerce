@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Rating from "@mui/material/Rating";
 import { Link } from "react-router-dom";
 import { MdZoomOutMap } from "react-icons/md";
@@ -7,8 +7,11 @@ import { FaRegHeart } from "react-icons/fa6";
 import Button from "@mui/material/Button";
 import { FaShoppingCart } from 'react-icons/fa';
 import "./style.css";
+import { MyContext } from "../../App";
 
 const ProductItems = () => {
+  const context = useContext(MyContext)
+  
   return (
     <div className="productItems shadow-lg rounded-md overflow-hidden border border-[hsla(0,0%,0%,0.1)] flex items-center">
       <div className="group relative w-[25%] h-[220px] bg-white overflow-hidden">
@@ -30,19 +33,35 @@ const ProductItems = () => {
         </span>
 
         {/* Hover buttons */}
-        <div className="absolute -top-40 group-hover:top-2 right-2 z-20 transition-all duration-300 flex flex-col gap-2">
-          {[IoMdGitCompare, MdZoomOutMap, FaRegHeart].map((Icon, idx) => (
-            <Button
-              key={idx}
-              size="small"
-              className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white !text-black hover:!bg-primary hover:text-white group/button"
-            >
-              <Icon className="text-[18px] group-hover/button:text-white" />
+       <div className="absolute -top-40 group-hover:top-2 right-2 z-20 transition-all duration-300 flex flex-col gap-2">
+  
+          <Button
+           size="small"
+           onClick={()=>context.setOpenProductModal(true)}
+          className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white !text-black hover:!bg-primary hover:text-white group/button"
+           >
+             <IoMdGitCompare className="text-[18px] group-hover/button:text-white" />
             </Button>
-          ))}
-        </div>
-      </div>
 
+         {/* Zoom Button */}
+             <Button
+            size="small"
+            onClick={() => alert("Zoom clicked")}
+            className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white !text-black hover:!bg-primary hover:text-white group/button"
+           >
+          <MdZoomOutMap className="text-[18px] group-hover/button:text-white" />
+           </Button>
+
+          {/* Wishlist Button */}
+            <Button
+           size="small"
+          onClick={() => alert("Wishlist clicked")}
+          className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white !text-black hover:!bg-primary hover:text-white group/button"
+            >
+          <FaRegHeart className="text-[18px] group-hover/button:text-white" />
+        </Button>
+       </div>
+        </div>
       {/* Info section */}
       <div className="info p-3 py-4 w-[75%]">
         <h6 className="text-sm font-medium">
