@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { createContext, useContext } from 'react';
+import Drawer from '@mui/material/Drawer';
+import { MyContext } from '../App';
+import { IoCloseSharp } from "react-icons/io5";
+import CartPanel from '../components/CartPanel';
+
 
 const Footer = () => {
+  const Context = useContext(MyContext);
+  
   return (
+    <>
     <footer className="bg-gray-900 text-gray-300 px-8 py-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5  gap-6">
         {/* Services */}
@@ -105,6 +113,19 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+
+    {/* cart panel */}
+        <Drawer open={Context.openCartPanel} 
+        onClose={Context.toggleCartPanel(false)}
+         anchor={'right'}
+         className='cartPanel'> 
+            <div className='flex items-center justify-between py-3 px-4 gap-3 border-b border-[rgba(0,0,0,0.2)]'>
+              <h4>Shoping Cart(1)</h4>
+              <IoCloseSharp  className="text-[20px] cursor-pointer" onClick={Context.toggleCartPanel(false)}/>
+            </div>
+            <CartPanel/>
+          </Drawer>
+    </>
   );
 };
 
