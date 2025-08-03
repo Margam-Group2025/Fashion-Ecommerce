@@ -10,6 +10,8 @@ import Search from "../Search";
 import Navigation from "./Navigation";
 import OfferHeader from "./OfferHeader";
 import { IoGitCompareOutline  } from "react-icons/io5";
+import { use } from "react";
+import { MyContext } from "../../App";
 
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -22,6 +24,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 const Header = () => {
+  const context = useContext(MyContext)
   
   return (
     <>
@@ -83,7 +86,7 @@ const Header = () => {
                 {/* Cart */}
                 <li>
                   <Tooltip title="Cart">
-                    <IconButton aria-label="Cart">
+                    <IconButton aria-label="Cart" onClick={()=>context.setOpenCartPanel(true)}>
                       <StyledBadge badgeContent={2} color="error">
                         <RiShoppingCart2Line />
                       </StyledBadge>
