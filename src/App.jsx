@@ -9,12 +9,13 @@ import { IoMdClose } from "react-icons/io";
 import Login from './pages/Login';
 import Register from './pages/Register';
 
-
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import ProductZoom from './components/ProductZoom';
 import ProductDetailsPage from './components/ProductDetailsPage';
+import CartPage from './pages/CartPage';
+
 
 
 const MyContext = createContext();
@@ -23,18 +24,21 @@ function App() {
   const [openProductModal, setOpenProductModal] = useState(false);
   const [maxWidth ,setMaxWidth] = useState('lg')
   const [fullWidth ,setFullWidth] = useState(true)
+  const [openCartPanel, setOpenCartPanel] = useState(false);
 
 
-  const handleClickProductModal = () => {
-    setOpenProductModal(true);
+ const toggleCartPanel = (newOpen) => () => {
+   setOpenCartPanel (newOpen);
   };
-
   const handleCloseProductModal = () => {
     setOpenProductModal(false);
   };
 
   const values={
-  setOpenProductModal
+  setOpenProductModal,
+  setOpenCartPanel,
+  toggleCartPanel,
+  openCartPanel
   }
   return (
     <>
@@ -47,7 +51,8 @@ function App() {
         <Route path={'/product/:id'} exact={true} element={<ProductDetails/>} /> 
         <Route path={'/login'} exact={true} element={<Login/>} /> 
         <Route path={'/register'} exact={true} element={<Register/>} /> 
-
+        <Route path={'/cartpage'} exact={true} element={<CartPage/>} /> 
+  
      </Routes>
      <Footer/>
      </MyContext.Provider>

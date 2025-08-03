@@ -79,3 +79,5 @@ overflow: inherit !important;
   height:50vh;
   overflow:hidden;
 }
+
+.cartPanel .MuiPaper-root{width: 400px ; overflow: hidden;}
