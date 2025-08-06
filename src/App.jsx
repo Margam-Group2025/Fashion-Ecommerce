@@ -8,14 +8,15 @@ import ProductDetails from './pages/ProductDetails';
 import { IoMdClose } from "react-icons/io";
 import Login from './pages/Login';
 import Register from './pages/Register';
-
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import ProductZoom from './components/ProductZoom';
 import ProductDetailsPage from './components/ProductDetailsPage';
 import CartPage from './pages/CartPage';
+import Verify from './components/verify';
 
+import toast, { Toaster } from 'react-hot-toast';
 
 
 const MyContext = createContext();
@@ -33,12 +34,23 @@ function App() {
   const handleCloseProductModal = () => {
     setOpenProductModal(false);
   };
+  
+  const openAlertBox=(status,msg)=>{
+    if(status === "success"){
+      toast.success(msg)
+    }
+    if(status === "error"){
+      toast.success(msg)
+    }
+    toast(status)
+  }
 
   const values={
   setOpenProductModal,
   setOpenCartPanel,
   toggleCartPanel,
-  openCartPanel
+  openCartPanel,
+  openAlertBox
   }
   return (
     <>
@@ -52,11 +64,15 @@ function App() {
         <Route path={'/login'} exact={true} element={<Login/>} /> 
         <Route path={'/register'} exact={true} element={<Register/>} /> 
         <Route path={'/cartpage'} exact={true} element={<CartPage/>} /> 
+        <Route path={'/verify'} exact={true} element={<Verify/>} /> 
   
      </Routes>
      <Footer/>
      </MyContext.Provider>
     </BrowserRouter>
+
+    <Toaster />
+
       <Dialog
         open={openProductModal}
         fullWidth={fullWidth}
