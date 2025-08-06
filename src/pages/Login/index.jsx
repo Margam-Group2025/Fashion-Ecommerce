@@ -3,15 +3,27 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc";
-
-
+import { useContext } from 'react';
+import { MyContext } from '../../App';
 
 const Login = () => {
 
  const [isShowPassword ,setIsShowPassword] = useState(false) 
+ const [formFields , SetFormFields] = useState({
+  Phone:'',
+  password:''
+ })
+ 
+ const context = useContext(MyContext);
+ const history = useNavigate();
 
+ const forgotPassword=()=>{
+  
+     context.openAlertBox("success","OTP send")
+     history('/verify')
+ }
   return (
     <>
     <section className='section py-10'>
@@ -24,11 +36,12 @@ const Login = () => {
             <form className="w-full mt-5">
                 <div className="form-group w-full mb-5">
                  <TextField
-                  type='email'
-                  id="email"
-                  label="Email Id" 
+                  type='Phone no'
+                  id="number"
+                  label="Phone No" 
                   variant="outlined" 
                   className='w-full '
+                  name='phone'
                   required/>
                 </div>
                 <div className="form-group w-full mb-5 relative">
@@ -38,8 +51,9 @@ const Login = () => {
                   label="Password" 
                   variant="outlined" 
                   className='w-full '
+                  name='password'
                   required/>
-                  <Button className='!absolute top-[10px] right-[10px] z-50 !w-[35px] !h-[35px] !min-w-[35px] !rounded-full !text-black'
+                  <Button type='submit' className='!absolute top-[10px] right-[10px] z-50 !w-[35px] !h-[35px] !min-w-[35px] !rounded-full !text-black'
                    onClick={()=>setIsShowPassword(!isShowPassword)}>
 
                     {
@@ -49,7 +63,7 @@ const Login = () => {
                   </Button>
                 </div>
 
-                <a className="link cursor-pointer text-[14px] font-[600px]"> Forget Password</a>
+                <a className="link cursor-pointer text-[14px] font-[600px]" onClick={forgotPassword}> Forget Password</a>
 
                 <div className="flex items-center w-full mt-5">
 
