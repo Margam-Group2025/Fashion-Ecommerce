@@ -38,7 +38,7 @@ export default function Verify() {
           <ShieldCheck className="w-12 h-12 text-orange-500" />
         </div>
         <h2 className="text-xl font-semibold mb-2">OTP Verification</h2>
-        <p className="text-gray-500 mb-6">Enter the 4-digit code sent to your Pnone No</p>
+        <p className="text-gray-500 mb-6">Enter the 4-digit code sent to your Phone no</p>
 
         <div className="flex justify-between mb-6">
           {otp.map((digit, i) => (
