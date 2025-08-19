@@ -15,8 +15,9 @@ import ProductZoom from './components/ProductZoom';
 import ProductDetailsPage from './components/ProductDetailsPage';
 import CartPage from './pages/CartPage';
 import Verify from './components/verify';
-
+import Forgotpassword from './pages/Forgotpassword'
 import toast, { Toaster } from 'react-hot-toast';
+import CheckOut from './pages/CheckOut';
 
 
 const MyContext = createContext();
@@ -26,6 +27,7 @@ function App() {
   const [maxWidth ,setMaxWidth] = useState('lg')
   const [fullWidth ,setFullWidth] = useState(true)
   const [openCartPanel, setOpenCartPanel] = useState(false);
+  const [isLogin , setIsLogin]= useState(true)
 
 
  const toggleCartPanel = (newOpen) => () => {
@@ -50,7 +52,9 @@ function App() {
   setOpenCartPanel,
   toggleCartPanel,
   openCartPanel,
-  openAlertBox
+  openAlertBox,
+  isLogin,
+  setIsLogin
   }
   return (
     <>
@@ -65,6 +69,9 @@ function App() {
         <Route path={'/register'} exact={true} element={<Register/>} /> 
         <Route path={'/cartpage'} exact={true} element={<CartPage/>} /> 
         <Route path={'/verify'} exact={true} element={<Verify/>} /> 
+        <Route path={'/forgotpassword'} exact={true} element={<Forgotpassword/>} /> 
+        <Route path={'/checkout'} exact={true} element={<CheckOut/>} /> 
+
   
      </Routes>
      <Footer/>

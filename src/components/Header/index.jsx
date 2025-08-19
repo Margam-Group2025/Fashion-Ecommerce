@@ -10,8 +10,9 @@ import Search from "../Search";
 import Navigation from "./Navigation";
 import OfferHeader from "./OfferHeader";
 import { IoGitCompareOutline  } from "react-icons/io5";
-import { use } from "react";
 import { MyContext } from "../../App";
+import { FaRegUserCircle } from "react-icons/fa";
+import Button from "@mui/material/Button";
 
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -44,22 +45,40 @@ const Header = () => {
          </div>
 
             {/* Search */}
-            <div className="col2 w-[45%] mb-3 mt-2 ">
+            <div className="col2 w-[40%] mb-3 mt-2 ">
               <Search />
             </div>
             {/* Actions */}
-            <div className="col3 w-[30%] flex items-center pl-11">
+            <div className="col3 w-[35%] flex items-center pl-11">
               <ul className="flex items-center justify-end gap-5">
-                {/* Auth Links */}
-                <li className="list-none pl-5">
-                  <Link to="/login" className="text-[14px] link font-[500] transition">
+                {
+                  context.isLogin == false ? 
+
+                 (<li className="list-none pl-5">
+                  <Link to="/login" 
+                  className="text-[14px] link font-[500] transition">
                     Login
                   </Link>
                   <span className="mx-1 text-gray-500 ">|</span>
-                  <Link to="/register" className="text-[14px] link font-[500] transition">
+                  <Link to="/register" 
+                  className="text-[14px] link font-[500] transition">
                     Register
                   </Link>
                 </li>
+
+                 ) :(
+                   <div className="myAccountWarp flex items-center gap-3">
+                    <Button className="!w-[30px] !h-[40px] !min-w-[40px] !rounded-full !bg-[#f1f1f1]">
+                      <FaRegUserCircle className="text-[20px] text-[rgba(0,0,0,0.7)]"/></Button>
+                    <div className="info flex flex-col">
+                      <h4 className="text-[14px] font-[400] text-left justify-start mb-0 capitalize">Jone Deo</h4>
+                      <span className="text-[13px] capitalize text-left justify-start">Jone@gmail.com</span>
+                      </div>  
+                   </div>
+                 )
+                
+                }
+                
 
                 {/* Wishlist */}
                 <li>
