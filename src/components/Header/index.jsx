@@ -2,9 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
-import IconButton from "@mui/material/IconButton";
 import { RiShoppingCart2Line } from "react-icons/ri";
-import { FaRegHeart } from "react-icons/fa";
 import Tooltip from "@mui/material/Tooltip";
 import Search from "../Search";
 import Navigation from "./Navigation";
@@ -13,7 +11,16 @@ import { IoGitCompareOutline  } from "react-icons/io5";
 import { MyContext } from "../../App";
 import { FaRegUserCircle } from "react-icons/fa";
 import Button from "@mui/material/Button";
+import { IoBagCheckOutline } from "react-icons/io5";
+import { FaRegHeart } from "react-icons/fa";
+import { MdLogout } from "react-icons/md";
 
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -25,6 +32,14 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 const Header = () => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   const context = useContext(MyContext)
   
   return (
@@ -67,14 +82,75 @@ const Header = () => {
                 </li>
 
                  ) :(
+                  <>
                    <div className="myAccountWarp flex items-center gap-3">
                     <Button className="!w-[30px] !h-[40px] !min-w-[40px] !rounded-full !bg-[#f1f1f1]">
-                      <FaRegUserCircle className="text-[20px] text-[rgba(0,0,0,0.7)]"/></Button>
+                      <FaRegUserCircle className="text-[20px] text-[rgba(0,0,0,0.7)]"
+                      onClick={handleClick}/></Button>
                     <div className="info flex flex-col">
                       <h4 className="text-[14px] font-[400] text-left justify-start mb-0 capitalize">Jone Deo</h4>
                       <span className="text-[13px] capitalize text-left justify-start">Jone@gmail.com</span>
                       </div>  
                    </div>
+              <Menu
+              anchorEl={anchorEl}
+              id="account-menu"
+              open={open}
+              onClose={handleClose}
+              onClick={handleClose}
+              slotProps={{
+               paper: {
+             elevation: 0,
+            sx: {
+              overflow: 'visible',
+              filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+              mt: 1.5,
+              '& .MuiAvatar-root': {
+                width: 32,
+                height: 32,
+                ml: -0.5,
+                mr: 1,
+              },
+              '&::before': {
+                content: '""',
+                display: 'block',
+                position: 'absolute',
+                top: 0,
+                right: 14,
+                width: 10,
+                height: 10,
+                bgcolor: 'background.paper',
+                transform: 'translateY(-50%) rotate(45deg)',
+                zIndex: 0,
+                },
+              },
+            },
+          }}
+            transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+             anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+          > 
+            <Link to="/myAccount" className="w-full block">
+            <MenuItem onClick={handleClose} className="flex gap-2 ">
+             <FaRegUserCircle /> My Account
+            </MenuItem>
+            </Link>
+             <Link to="/my-orders" className="w-full block">
+            <MenuItem onClick={handleClose} className="flex gap-2 ">
+             <IoBagCheckOutline  /> Orders
+            </MenuItem>
+            </Link>
+             <Link to="/my-list" className="w-full block">
+            <MenuItem onClick={handleClose}  className="flex gap-2 ">
+             <FaRegHeart /> My List 
+            </MenuItem>
+            </Link>
+             <Link to="/my-logout" className="w-full block">
+            <MenuItem onClick={handleClose}  className="flex gap-2 ">
+             <MdLogout  /> Logout
+            </MenuItem>
+            </Link>
+            </Menu>
+                  </>
                  )
                 
                 }

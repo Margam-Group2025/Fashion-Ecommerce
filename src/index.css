@@ -83,3 +83,19 @@ overflow: inherit !important;
 }
 
 .cartPanel .MuiPaper-root{width: 400px ; overflow: hidden;}
+
+.myAccountTabs li a{position: relative; display:block;}
+.myAccountTabs li a:before {
+  content: '';
+  width: 3px;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  background: #f66033;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.myAccountTabs li a.active::before{height:100% ; opacity:1 ; top:0px}
+.myAccountTabs li a.active button svg{color:#f66033 !important ; opacity: 1 !important;}
